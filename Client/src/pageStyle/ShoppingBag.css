@@ -1,0 +1,71 @@
+.shopping-bag-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.shopping-bag-content {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.shopping-bag-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shopping-bag-item {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.item-details {
+  margin-bottom: 10px;
+}
+
+.item-total {
+  font-weight: bold;
+}
+
+.shopping-bag-summary {
+  background-color: #fff;
+  padding: 20px;
+  text-align: right;
+}
+
+.shopping-bag-checkout {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.payment-options {
+  margin-bottom: 20px;
+}
+
+.sign-in-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.checkout-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.continue-shopping-button {
+  background-color: #ccc;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}

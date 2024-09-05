@@ -1,0 +1,104 @@
+/* Banner Section */
+.banner {
+  display: flex;
+  position: relative;
+  padding: 0 200px; /* Adjust the padding as needed */
+  background-color: #ffffff;
+}
+
+.banner-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.banner-image img {
+  width: 100%;
+  height: auto;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.banner-text p {
+  margin: 5px 0;
+}
+
+.banner-text h2, .banner-text h3 {
+  margin: 10px 0;
+}
+
+.banner-text button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Product Carousel Section */
+.product-carousel {
+  padding: 0 200px;
+  margin-bottom: 50px;
+}
+
+.product-carousel h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 20px;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.product-card {
+  min-width: 200px; /* Minimum width for each product card */
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure images cover the space without distortion */
+}
+
+.product-card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a lifting effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-carousel {
+    padding: 0 20px;
+  }
+
+  .product-card {
+    min-width: 150px; /* Reduce minimum width on smaller screens */
+  }
+}

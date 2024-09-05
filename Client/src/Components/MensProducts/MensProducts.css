@@ -1,0 +1,60 @@
+.men-products {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .men-products h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filters input,
+  .filters select {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .filters input {
+    flex: 1;
+  }
+  
+  .filters select {
+    flex: 1;
+    max-width: 200px;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .product-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .product-card p {
+    margin: 5px 0;
+  }
+  
