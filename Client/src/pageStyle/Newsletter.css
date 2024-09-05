@@ -1,54 +1,100 @@
-/* src/pages/Newsletter.css */
-
+/* General styles for the Newsletter page */
 .newsletter-page {
-    padding: 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.newsletter-page h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-page p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter-input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.newsletter-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.newsletter-button:hover {
+  background-color: #0056b3;
+}
+
+.newsletter-status {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive styles for tablet (768px and below) */
+@media (max-width: 768px) {
   .newsletter-page h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+      font-size: 1.75rem; /* Slightly smaller heading for tablets */
   }
-  
+
   .newsletter-page p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+      font-size: 0.95rem; /* Adjust paragraph font size */
   }
-  
-  .newsletter-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+
   .newsletter-input {
-    padding: 10px;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
+      width: 90%; /* Allow input field to take more width on smaller screens */
+      font-size: 0.95rem; /* Adjust input font size */
+      padding: 8px; /* Reduce padding for better fit */
   }
-  
+
   .newsletter-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
+      font-size: 0.95rem; /* Adjust button font size */
+      padding: 8px 16px; /* Adjust padding */
   }
-  
-  .newsletter-button:hover {
-    background-color: #0056b3;
+}
+
+/* Responsive styles for mobile (480px and below) */
+@media (max-width: 480px) {
+  .newsletter-page {
+      padding: 15px; /* Reduce padding for mobile */
   }
-  
-  .newsletter-status {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #333;
+
+  .newsletter-page h1 {
+      font-size: 1.5rem; /* Smaller heading for mobile */
   }
-  
+
+  .newsletter-page p {
+      font-size: 0.9rem; /* Smaller paragraph font */
+  }
+
+  .newsletter-input {
+      width: 100%; /* Full width for mobile */
+      font-size: 0.9rem; /* Smaller input font size */
+      padding: 6px; /* Less padding for input */
+  }
+
+  .newsletter-button {
+      font-size: 0.9rem; /* Smaller button font */
+      padding: 6px 12px; /* Smaller padding */
+  }
+}

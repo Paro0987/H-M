@@ -187,3 +187,65 @@ header {
     cursor: pointer;
     color: #333;
 }
+/* General responsiveness for header */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .top-links, .user-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .nav-item {
+        padding: 10px;
+    }
+
+    .navbar__search-bar {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .navbar__search input {
+        width: 100px;
+    }
+
+    .sub-banner {
+        flex-direction: column;
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+/* Additional styles for extra small screens */
+@media (max-width: 480px) {
+    .top-bar, .main-nav, .sub-banner {
+        padding: 10px;
+    }
+
+    .nav-item a {
+        padding: 5px 10px;
+    }
+
+    .navbar__search input {
+        width: 80px;
+    }
+
+    .sub-banner span {
+        font-size: 10px;
+    }
+}

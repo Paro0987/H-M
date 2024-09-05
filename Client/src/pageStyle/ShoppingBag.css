@@ -1,3 +1,4 @@
+/* Shopping Bag Page Styles */
 .shopping-bag-page {
   max-width: 800px;
   margin: 0 auto;
@@ -45,27 +46,70 @@
   margin-bottom: 20px;
 }
 
-.sign-in-button {
-  background-color: #007bff;
-  color: #fff;
+.sign-in-button, .checkout-button, .continue-shopping-button {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
 }
 
-.checkout-button {
+.sign-in-button, .checkout-button {
   background-color: #007bff;
   color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
   margin-right: 10px;
 }
 
 .continue-shopping-button {
   background-color: #ccc;
   color: #000;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
+}
+
+/* Responsive styles for tablet (768px and below) */
+@media (max-width: 768px) {
+  .shopping-bag-page {
+    padding: 15px;
+  }
+
+  .shopping-bag-items {
+    justify-content: center;
+  }
+
+  .shopping-bag-item {
+    width: 100%; /* Full width on tablet */
+    margin-bottom: 15px;
+  }
+
+  .sign-in-button, .checkout-button, .continue-shopping-button {
+    padding: 8px 15px; /* Reduce padding for buttons on tablet */
+  }
+}
+
+/* Responsive styles for mobile (480px and below) */
+@media (max-width: 480px) {
+  .shopping-bag-page {
+    padding: 10px;
+  }
+
+  .shopping-bag-content {
+    padding: 15px; /* Reduce padding on mobile */
+  }
+
+  .shopping-bag-item {
+    width: 100%; /* Full width on mobile */
+    padding: 15px; /* Reduce padding for items on mobile */
+    margin-bottom: 15px;
+  }
+
+  .shopping-bag-summary {
+    padding: 15px; /* Reduce padding for the summary on mobile */
+  }
+
+  .shopping-bag-checkout {
+    padding: 15px; /* Reduce padding for the checkout section on mobile */
+  }
+
+  .sign-in-button, .checkout-button, .continue-shopping-button {
+    width: 100%; /* Full-width buttons for better usability on mobile */
+    padding: 10px; /* Maintain some padding */
+    margin-bottom: 10px; /* Add space between buttons */
+  }
 }

@@ -1,37 +1,76 @@
-/* src/pageStyle/FindStore.css */
-
+/* General styles for the Find Store page */
 .find-store-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #f8f8f8;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f8f8f8;
+  height: 100vh;
+}
+
+.find-store-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* Adds spacing between the search bar and map */
+}
+
+.find-store-search {
+  flex: 1;
+  max-width: 300px; /* Limits the width of the search bar */
+}
+
+.find-store-search input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.find-store-map {
+  flex: 3;
+  height: 500px;
+  width: 100%;
+  border-radius: 4px;
+  position: relative; /* To ensure map dimensions are correctly applied */
+}
+
+/* Responsive styles for tablet (768px and below) */
+@media (max-width: 768px) {
+  .find-store-header {
+      flex-direction: column;
+      gap: 15px; /* Reduces the gap between search bar and map */
+  }
+
+  .find-store-map {
+      height: 400px;
+  }
+
+  .find-store-search input {
+      font-size: 14px;
+      padding: 8px;
+  }
+}
+
+/* Responsive styles for mobile (480px and below) */
+@media (max-width: 480px) {
+  .find-store-container {
+      padding: 10px;
   }
 
   .find-store-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px; /* Adds spacing between the search bar and map */
+      gap: 10px; /* Further reduces the gap */
   }
-  
+
   .find-store-search {
-    flex: 1;
-    max-width: 300px; /* Limits the width of the search bar */
+      max-width: 100%; /* Allow the search bar to take full width */
   }
-  
-  .find-store-search input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
+
   .find-store-map {
-    flex: 3;
-    height: 500px;
-    width: 100%;
-    border-radius: 4px;
-    position: relative; /* To ensure map dimensions are correctly applied */
+      height: 300px; /* Adjust map height for smaller screens */
   }
-  
+
+  .find-store-search input {
+      font-size: 13px;
+      padding: 6px;
+  }
+}

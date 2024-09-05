@@ -1,5 +1,4 @@
-/* src/app.css */
-
+/* Root Styles */
 #root {
   width: 100%;
   margin: 0;
@@ -15,14 +14,12 @@ header {
   padding: 0; /* Ensure no padding */
   box-sizing: border-box; /* Include padding and border in width calculations */
 }
+
 body {
   overflow-x: hidden;
 }
 
-/* Other styles can remain the same */
-
-
-
+/* Keyframes for logo spin animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,5 +32,52 @@ body {
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Responsive styles for tablet (768px and below) */
+@media (max-width: 768px) {
+  header {
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  #root {
+    padding: 10px; /* Add padding for better spacing on tablets */
+  }
+
+  .logo {
+    width: 150px; /* Adjust logo size on tablet */
+  }
+
+  nav {
+    font-size: 0.9rem; /* Reduce font size in navigation for better fit */
+  }
+}
+
+/* Responsive styles for mobile (480px and below) */
+@media (max-width: 480px) {
+  header {
+    padding: 15px; /* Add more padding for mobile */
+  }
+
+  #root {
+    padding: 15px; /* Increase padding for mobile screens */
+  }
+
+  .logo {
+    width: 120px; /* Further reduce logo size on mobile */
+  }
+
+  nav {
+    font-size: 0.8rem; /* Reduce font size even more on mobile */
+  }
+
+  .header-menu {
+    flex-direction: column; /* Stack menu items vertically on mobile */
+    gap: 10px;
+  }
+
+  .header-menu a {
+    padding: 10px 0; /* Add spacing between navigation links */
   }
 }

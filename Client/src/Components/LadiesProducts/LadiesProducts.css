@@ -33,3 +33,49 @@
 .product-card p {
   margin: 0.5em 0;
 }
+/* General responsiveness for the ladies-products section */
+@media (max-width: 768px) {
+  .ladies-products {
+      padding: 1em;
+  }
+
+  .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 0.5em;
+  }
+
+  .product-card {
+      padding: 0.8em;
+  }
+
+  .product-card h2 {
+      font-size: 1.1em;
+  }
+
+  .product-card p {
+      font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .ladies-products {
+      padding: 0.5em;
+  }
+
+  .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 0.5em;
+  }
+
+  .product-card {
+      padding: 0.5em;
+  }
+
+  .product-card h2 {
+      font-size: 1em;
+  }
+
+  .product-card p {
+      font-size: 0.85em;
+  }
+}

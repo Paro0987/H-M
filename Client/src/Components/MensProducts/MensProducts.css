@@ -57,4 +57,73 @@
   .product-card p {
     margin: 5px 0;
   }
-  
+  /* General responsiveness for the men-products section */
+@media (max-width: 768px) {
+  .men-products {
+      padding: 15px;
+  }
+
+  .filters {
+      gap: 5px;
+      margin-bottom: 15px;
+  }
+
+  .filters input,
+  .filters select {
+      padding: 8px;
+      font-size: 14px;
+  }
+
+  .product-grid {
+      gap: 15px;
+  }
+
+  .product-card {
+      padding: 10px;
+      width: 180px;
+  }
+
+  .product-card h2 {
+      font-size: 16px;
+  }
+
+  .product-card p {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .men-products {
+      padding: 10px;
+  }
+
+  .filters {
+      display: block;
+      margin-bottom: 10px;
+  }
+
+  .filters input,
+  .filters select {
+      width: 100%;
+      padding: 6px;
+      font-size: 12px;
+  }
+
+  .product-grid {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .product-card {
+      width: 100%;
+      padding: 8px;
+  }
+
+  .product-card h2 {
+      font-size: 14px;
+  }
+
+  .product-card p {
+      font-size: 12px;
+  }
+}
