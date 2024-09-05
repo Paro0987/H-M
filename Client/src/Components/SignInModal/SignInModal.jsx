@@ -14,7 +14,7 @@ const SignInModal = ({ isOpen, onClose }) => {
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/user/login', {
+      const response = await axios.post('https://hennes-and-mauritz.onrender.com/user/login', {
         email,
         password,
       });

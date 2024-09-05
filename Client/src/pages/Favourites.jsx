@@ -10,7 +10,7 @@ const Favourites = () => {
   useEffect(() => {
     const fetchFavourites = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/user/favourites', {
+        const response = await axios.get('https://hennes-and-mauritz.onrender.com/user/favourites', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         });
         // Check if response.data.favourites is an array
@@ -32,7 +32,7 @@ const Favourites = () => {
 
   const removeFromFavourites = async (itemId) => {
     try {
-      await axios.delete(`http://localhost:5000/user/favourites/${itemId}`, {
+      await axios.delete(`https://hennes-and-mauritz.onrender.com/user/favourites/${itemId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setFavourites(favourites.filter(item => item.id !== itemId));

@@ -25,7 +25,7 @@ const RegisterModal = ({ isOpen, onClose }) => {
   const handleRegisterSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/user/register', registerData);
+      const response = await axios.post('https://hennes-and-mauritz.onrender.com/user/register', registerData);
       alert(response.data.message); // Alert the response message from the server
       onClose(); // Close the modal after successful registration
       navigate('/'); // Redirect to the home page or dashboard

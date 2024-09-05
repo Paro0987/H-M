@@ -8,7 +8,7 @@ const ShoppingBag = ({ userId }) => {
   useEffect(() => {
     if (userId) {
       // Fetch cart items for the specific user
-      axios.get('/cart', { params: { userId } })
+      axios.get('https://hennes-and-mauritz.onrender.com/cart', { params: { userId } })
         .then(response => {
           const cartItems = response.data.data?.items || []; // Adjust based on your API response structure
           setItems(cartItems);
@@ -22,7 +22,7 @@ const ShoppingBag = ({ userId }) => {
   const totalPrice = items.reduce((total, item) => total + item.price * item.quantity, 0);
 
   const addToCart = (product) => {
-    axios.post('/cart/add', {
+    axios.post('https://hennes-and-mauritz.onrender.com/cart/add', {
       user: userId,
       product: product._id, // Assuming product ID or similar identifier
       quantity: 1, // Default quantity, adjust as needed
@@ -39,7 +39,7 @@ const ShoppingBag = ({ userId }) => {
   };
 
   const updateCartItem = (id, newQuantity) => {
-    axios.patch(`/cart/update/${id}`, { quantity: newQuantity })
+    axios.patch(`https://hennes-and-mauritz.onrender.com/cart/update/${id}`, { quantity: newQuantity })
       .then(response => {
         console.log(response.data.message);
         // Update the state with the new quantity
@@ -53,7 +53,7 @@ const ShoppingBag = ({ userId }) => {
   };
 
   const deleteCartItem = (id) => {
-    axios.delete(`/cart/delete/${id}`)
+    axios.delete(`https://hennes-and-mauritz.onrender.com/cart/delete/${id}`)
       .then(response => {
         console.log(response.data.message);
         // Remove the item from the state
@@ -65,7 +65,7 @@ const ShoppingBag = ({ userId }) => {
   };
 
   const checkout = () => {
-    axios.delete('/cart/checkout', { data: { userId } })
+    axios.delete('https://hennes-and-mauritz.onrender.com/cart/checkout', { data: { userId } })
       .then(response => {
         console.log(response.data.message);
         setItems([]); // Clear items after checkout

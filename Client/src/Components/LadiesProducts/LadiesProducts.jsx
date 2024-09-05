@@ -18,7 +18,7 @@ const LadiesProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/products/ladies', {
+        const response = await axios.get('https://hennes-and-mauritz.onrender.com/products/ladies', {
           params: { category, subCategory, sort, search }
         });
         console.log('Ladies response:', response);

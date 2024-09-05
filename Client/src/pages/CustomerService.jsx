@@ -11,8 +11,8 @@ const CustomerService = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const contactResponse = await axios.get('http://localhost:5000/api/contact-info');
-        const faqsResponse = await axios.get('http://localhost:5000/api/faqs');
+        const contactResponse = await axios.get('https://hennes-and-mauritz.onrender.com/api/contact-info');
+        const faqsResponse = await axios.get('https://hennes-and-mauritz.onrender.com/api/faqs');
 
         if (Array.isArray(faqsResponse.data)) {
           setContactInfo(contactResponse.data);

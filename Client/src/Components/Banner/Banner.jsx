@@ -15,7 +15,7 @@ const Banner = () => {
   useEffect(() => {
     const fetchLadiesProducts = async () => {
       try {
-        const response = await fetch('http://localhost:5000/products/ladies');
+        const response = await fetch('https://hennes-and-mauritz.onrender.com/products/ladies');
         const data = await response.json();
         console.log(data.products);
         setLadiesProducts(data.products || []); 
