@@ -16,7 +16,9 @@ const { sportRouter } = require("./routes/sports.router");
 const { authenticate } = require("./middlewares/auth.middlewares");
 
 
-app.use(cors({ origin: "*" }));
+app.use(cors({
+  origin: 'https://fabulous-biscuit-bdef63.netlify.app'
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => {
